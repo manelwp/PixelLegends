@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JocMPModelStoreContainer" CdmEntityContainer="JocMPEntities">
+    <EntitySetMapping Name="armas">
+      <EntityTypeMapping TypeName="JocMPModel.arma">
+        <MappingFragment StoreEntitySet="arma">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="dany" ColumnName="dany" />
+          <ScalarProperty Name="dany_especial" ColumnName="dany_especial" />
+          <ScalarProperty Name="id_personatge" ColumnName="id_personatge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armaduras">
+      <EntityTypeMapping TypeName="JocMPModel.armadura">
+        <MappingFragment StoreEntitySet="armadura">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="defensa" ColumnName="defensa" />
+          <ScalarProperty Name="defensa_especial" ColumnName="defensa_especial" />
+          <ScalarProperty Name="id_personatge" ColumnName="id_personatge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jugadors">
+      <EntityTypeMapping TypeName="JocMPModel.jugador">
+        <MappingFragment StoreEntitySet="jugador">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="nivell" ColumnName="nivell" />
+          <ScalarProperty Name="vida" ColumnName="vida" />
+          <ScalarProperty Name="atac" ColumnName="atac" />
+          <ScalarProperty Name="atac_especial" ColumnName="atac_especial" />
+          <ScalarProperty Name="defensa" ColumnName="defensa" />
+          <ScalarProperty Name="defensa_especial" ColumnName="defensa_especial" />
+          <ScalarProperty Name="id_usuari" ColumnName="id_usuari" />
+          <ScalarProperty Name="id_personatge" ColumnName="id_personatge" />
+          <ScalarProperty Name="id_arma" ColumnName="id_arma" />
+          <ScalarProperty Name="id_armadura" ColumnName="id_armadura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monstres">
+      <EntityTypeMapping TypeName="JocMPModel.monstre">
+        <MappingFragment StoreEntitySet="monstre">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="vida" ColumnName="vida" />
+          <ScalarProperty Name="atac" ColumnName="atac" />
+          <ScalarProperty Name="atac_especial" ColumnName="atac_especial" />
+          <ScalarProperty Name="defensa" ColumnName="defensa" />
+          <ScalarProperty Name="defensa_especial" ColumnName="defensa_especial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personatges">
+      <EntityTypeMapping TypeName="JocMPModel.personatge">
+        <MappingFragment StoreEntitySet="personatge">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="vida" ColumnName="vida" />
+          <ScalarProperty Name="atac" ColumnName="atac" />
+          <ScalarProperty Name="atac_especial" ColumnName="atac_especial" />
+          <ScalarProperty Name="defensa" ColumnName="defensa" />
+          <ScalarProperty Name="defensa_especial" ColumnName="defensa_especial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuaris">
+      <EntityTypeMapping TypeName="JocMPModel.usuari">
+        <MappingFragment StoreEntitySet="usuari">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="contrasenya" ColumnName="contrasenya" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

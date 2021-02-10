@@ -1,0 +1,53 @@
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\Model.dll.config
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\Model.dll
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\Model.pdb
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\EntityFramework.dll
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\EntityFramework.xml
+C:\Users\manel\source\repos\JocMP\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manel\source\repos\JocMP\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\manel\source\repos\JocMP\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\manel\source\repos\JocMP\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\manel\source\repos\JocMP\Model\obj\Debug\Model.dll
+C:\Users\manel\source\repos\JocMP\Model\obj\Debug\Model.pdb
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\Model.dll.config
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\Model.dll
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\Model.pdb
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\EntityFramework.dll
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\EntityFramework.xml
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\obj\Debug\Model.dll
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\obj\Debug\Model.pdb
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Pere\Desktop\Materies\M15 DUAL\FINAL\JocMP\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\Model.dll.config
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\Model.dll
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\Model.pdb
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\EntityFramework.dll
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\EntityFramework.xml
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\obj\Debug\Model.dll
+C:\Users\peret\OneDrive\Escriptori\Materies\M15\JocMP\Model\obj\Debug\Model.pdb
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\Model.dll.config
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\Model.dll
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\Model.pdb
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\EntityFramework.dll
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\EntityFramework.xml
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\manel\Desktop\JocMP\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\manel\Desktop\JocMP\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\manel\Desktop\JocMP\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\manel\Desktop\JocMP\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\manel\Desktop\JocMP\Model\obj\Debug\Model.dll
+C:\Users\manel\Desktop\JocMP\Model\obj\Debug\Model.pdb

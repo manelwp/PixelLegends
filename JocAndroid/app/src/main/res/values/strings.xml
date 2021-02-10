@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JocAndroid</string>
+    <string name="textajuda">Som dos estudiants del cicle de 2DAM (el Manel Soro i el Pere
+        Terradas). Aquesta aplicació es de android però apart tenim una altre aplicació que
+    és un joc basat amb la informació que es pot trobar en aquesta app. Si necessiteu ajuda
+    teniu un apartat on ens podeu enviar un correu.</string>
+</resources>

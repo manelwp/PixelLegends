@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECC392A4-612F-43DB-AD57-024EFEB4E8C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrearJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearJugador.Designer.cs">
+      <DependentUpon>CrearJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuJoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuJoc.Designer.cs">
+      <DependentUpon>MenuJoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuV.Designer.cs">
+      <DependentUpon>MenuV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MirarJugadors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MirarJugadors.Designer.cs">
+      <DependentUpon>MirarJugadors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raid.designer.cs">
+      <DependentUpon>Raid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Survival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Survival.Designer.cs">
+      <DependentUpon>Survival.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrearJugador.resx">
+      <DependentUpon>CrearJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuJoc.resx">
+      <DependentUpon>MenuJoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuV.resx">
+      <DependentUpon>MenuV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MirarJugadors.resx">
+      <DependentUpon>MirarJugadors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Raid.resx">
+      <DependentUpon>Raid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Survival.resx">
+      <DependentUpon>Survival.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guerrero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ranger2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mago.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wooden_armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tiki_armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apprentice_armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bartolo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jugar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jugadors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoPixelPequeño.png" />
+    <None Include="Resources\imagen-animada-cofre-14.gif" />
+    <None Include="Resources\monstre9.gif" />
+    <None Include="Resources\monstre8.gif" />
+    <None Include="Resources\monstre7.gif" />
+    <None Include="Resources\monstre6.gif" />
+    <None Include="Resources\monstre5.gif" />
+    <None Include="Resources\monstre4.gif" />
+    <None Include="Resources\monstre3.gif" />
+    <None Include="Resources\monstre2.gif" />
+    <None Include="Resources\monstre1.gif" />
+    <None Include="Resources\monstre15.png" />
+    <None Include="Resources\monstre14.gif" />
+    <None Include="Resources\monstre13.GIF" />
+    <None Include="Resources\monstre12.gif" />
+    <None Include="Resources\monstre11.gif" />
+    <None Include="Resources\monstre10.gif" />
+    <None Include="Resources\arma14.png" />
+    <None Include="Resources\arma15.png" />
+    <None Include="Resources\arma16.png" />
+    <None Include="Resources\arma17.png" />
+    <None Include="Resources\arma18.png" />
+    <None Include="Resources\arma19.png" />
+    <None Include="Resources\arma20.gif" />
+    <None Include="Resources\arma1.png" />
+    <None Include="Resources\arma2.png" />
+    <None Include="Resources\arma3.png" />
+    <None Include="Resources\arma4.png" />
+    <None Include="Resources\arma5.png" />
+    <None Include="Resources\arma6.png" />
+    <None Include="Resources\arma7.png" />
+    <None Include="Resources\arma8.png" />
+    <None Include="Resources\arma9.png" />
+    <None Include="Resources\arma10.png" />
+    <None Include="Resources\arma11.png" />
+    <None Include="Resources\arma12.png" />
+    <None Include="Resources\arma13.png" />
+    <None Include="Resources\armadura2.png" />
+    <None Include="Resources\armadura3.png" />
+    <None Include="Resources\armadura4.png" />
+    <None Include="Resources\armadura5.png" />
+    <None Include="Resources\armadura6.png" />
+    <None Include="Resources\armadura7.png" />
+    <None Include="Resources\armadura8.png" />
+    <None Include="Resources\armadura9.png" />
+    <None Include="Resources\armadura10.png" />
+    <None Include="Resources\armadura11.png" />
+    <None Include="Resources\armadura12.png" />
+    <None Include="Resources\armadura1.png" />
+    <None Include="Resources\armadura25.png" />
+    <None Include="Resources\armadura26.png" />
+    <None Include="Resources\armadura27.png" />
+    <None Include="Resources\armadura28.png" />
+    <None Include="Resources\armadura29.png" />
+    <None Include="Resources\armadura30.png" />
+    <None Include="Resources\armadura31.png" />
+    <None Include="Resources\armadura32.png" />
+    <None Include="Resources\armadura22.png" />
+    <None Include="Resources\armadura23.png" />
+    <None Include="Resources\armadura24.png" />
+    <None Include="Resources\armadura15.png" />
+    <None Include="Resources\armadura16.png" />
+    <None Include="Resources\armadura17.png" />
+    <None Include="Resources\armadura18.png" />
+    <None Include="Resources\armadura19.png" />
+    <None Include="Resources\armadura20.png" />
+    <None Include="Resources\armadura21.png" />
+    <None Include="Resources\armadura13.png" />
+    <None Include="Resources\armadura14.png" />
+    <None Include="Resources\cor.png" />
+    <None Include="Resources\cofre.png" />
+    <None Include="Resources\arma49.png" />
+    <None Include="Resources\arma50.png" />
+    <None Include="Resources\arma51.png" />
+    <None Include="Resources\arma52.png" />
+    <None Include="Resources\arma36.png" />
+    <None Include="Resources\arma37.png" />
+    <None Include="Resources\arma38.png" />
+    <None Include="Resources\arma39.png" />
+    <None Include="Resources\arma40.png" />
+    <None Include="Resources\arma41.png" />
+    <None Include="Resources\arma42.png" />
+    <None Include="Resources\arma43.png" />
+    <None Include="Resources\arma44.png" />
+    <None Include="Resources\arma45.png" />
+    <None Include="Resources\arma47.png" />
+    <None Include="Resources\arma48.png" />
+    <None Include="Resources\arma22.png" />
+    <None Include="Resources\arma23.png" />
+    <None Include="Resources\arma24.png" />
+    <None Include="Resources\arma25.png" />
+    <None Include="Resources\arma26.png" />
+    <None Include="Resources\arma27.png" />
+    <None Include="Resources\arma28.png" />
+    <None Include="Resources\arma29.png" />
+    <None Include="Resources\arma30.png" />
+    <None Include="Resources\arma31.png" />
+    <None Include="Resources\arma32.png" />
+    <None Include="Resources\arma33.png" />
+    <None Include="Resources\arma34.png" />
+    <None Include="Resources\arma35.png" />
+    <None Include="Resources\arma21.png" />
+    <None Include="Resources\armadura33.png" />
+    <None Include="Resources\armadura331.png" />
+    <None Include="Resources\camp.jpg" />
+    <None Include="Resources\Bartolo31.png" />
+    <Content Include="Resources\fondo1.jpg" />
+    <None Include="Resources\fondo8tree1.jpg" />
+    <None Include="Resources\fondo11.jpg" />
+    <Content Include="Resources\fondo2.jpg" />
+    <None Include="Resources\fondo21.jpg" />
+    <Content Include="Resources\fondo3.jpg" />
+    <None Include="Resources\fondo31.jpg" />
+    <None Include="Resources\fondo41.jpg" />
+    <Content Include="Resources\fondo5.jpg" />
+    <None Include="Resources\fondo51.jpg" />
+    <Content Include="Resources\fondo6.png" />
+    <None Include="Resources\fondo61.png" />
+    <Content Include="Resources\fondo7.jpg" />
+    <None Include="Resources\fondo71.jpg" />
+    <Content Include="Resources\fondo8tree.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+</Project>

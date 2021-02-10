@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JocMPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="arma">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="dany" Type="float" Nullable="false" />
+    <Property Name="dany_especial" Type="float" Nullable="false" />
+    <Property Name="id_personatge" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="armadura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="defensa" Type="float" Nullable="false" />
+    <Property Name="defensa_especial" Type="float" Nullable="false" />
+    <Property Name="id_personatge" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jugador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="nivell" Type="int" />
+    <Property Name="vida" Type="float" />
+    <Property Name="atac" Type="float" />
+    <Property Name="atac_especial" Type="float" />
+    <Property Name="defensa" Type="float" />
+    <Property Name="defensa_especial" Type="float" />
+    <Property Name="id_usuari" Type="int" />
+    <Property Name="id_personatge" Type="int" />
+    <Property Name="id_arma" Type="int" />
+    <Property Name="id_armadura" Type="int" />
+  </EntityType>
+  <EntityType Name="monstre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="vida" Type="float" />
+    <Property Name="atac" Type="float" />
+    <Property Name="atac_especial" Type="float" />
+    <Property Name="defensa" Type="float" />
+    <Property Name="defensa_especial" Type="float" />
+  </EntityType>
+  <EntityType Name="personatge">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="vida" Type="float" />
+    <Property Name="atac" Type="float" />
+    <Property Name="atac_especial" Type="float" />
+    <Property Name="defensa" Type="float" />
+    <Property Name="defensa_especial" Type="float" />
+  </EntityType>
+  <EntityType Name="usuari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="contrasenya" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_arma_personatge">
+    <End Role="personatge" Type="Self.personatge" Multiplicity="1" />
+    <End Role="arma" Type="Self.arma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personatge">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="arma">
+        <PropertyRef Name="id_personatge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_armadura_personatge">
+    <End Role="personatge" Type="Self.personatge" Multiplicity="1" />
+    <End Role="armadura" Type="Self.armadura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personatge">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="armadura">
+        <PropertyRef Name="id_personatge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_arma">
+    <End Role="arma" Type="Self.arma" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="arma">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_arma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_armadura">
+    <End Role="armadura" Type="Self.armadura" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="armadura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_armadura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_personatge">
+    <End Role="personatge" Type="Self.personatge" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personatge">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_personatge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_usuari">
+    <End Role="usuari" Type="Self.usuari" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuari">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_usuari" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JocMPModelStoreContainer">
+    <EntitySet Name="arma" EntityType="Self.arma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="armadura" EntityType="Self.armadura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="jugador" EntityType="Self.jugador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="monstre" EntityType="Self.monstre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="personatge" EntityType="Self.personatge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuari" EntityType="Self.usuari" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_arma_personatge" Association="Self.fk_arma_personatge">
+      <End Role="personatge" EntitySet="personatge" />
+      <End Role="arma" EntitySet="arma" />
+    </AssociationSet>
+    <AssociationSet Name="fk_armadura_personatge" Association="Self.fk_armadura_personatge">
+      <End Role="personatge" EntitySet="personatge" />
+      <End Role="armadura" EntitySet="armadura" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_arma" Association="Self.fk_jugador_arma">
+      <End Role="arma" EntitySet="arma" />
+      <End Role="jugador" EntitySet="jugador" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_armadura" Association="Self.fk_jugador_armadura">
+      <End Role="armadura" EntitySet="armadura" />
+      <End Role="jugador" EntitySet="jugador" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_personatge" Association="Self.fk_jugador_personatge">
+      <End Role="personatge" EntitySet="personatge" />
+      <End Role="jugador" EntitySet="jugador" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_usuari" Association="Self.fk_jugador_usuari">
+      <End Role="usuari" EntitySet="usuari" />
+      <End Role="jugador" EntitySet="jugador" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

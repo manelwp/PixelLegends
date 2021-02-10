@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JocMPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="arma">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dany" Type="Double" Nullable="false" />
+    <Property Name="dany_especial" Type="Double" Nullable="false" />
+    <Property Name="id_personatge" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="personatge" Relationship="Self.fk_arma_personatge" FromRole="arma" ToRole="personatge" />
+    <NavigationProperty Name="jugadors" Relationship="Self.fk_jugador_arma" FromRole="arma" ToRole="jugador" />
+  </EntityType>
+  <EntityType Name="armadura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="defensa" Type="Double" Nullable="false" />
+    <Property Name="defensa_especial" Type="Double" Nullable="false" />
+    <Property Name="id_personatge" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="personatge" Relationship="Self.fk_armadura_personatge" FromRole="armadura" ToRole="personatge" />
+    <NavigationProperty Name="jugadors" Relationship="Self.fk_jugador_armadura" FromRole="armadura" ToRole="jugador" />
+  </EntityType>
+  <EntityType Name="jugador">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nivell" Type="Int32" />
+    <Property Name="vida" Type="Double" />
+    <Property Name="atac" Type="Double" />
+    <Property Name="atac_especial" Type="Double" />
+    <Property Name="defensa" Type="Double" />
+    <Property Name="defensa_especial" Type="Double" />
+    <Property Name="id_usuari" Type="Int32" />
+    <Property Name="id_personatge" Type="Int32" />
+    <Property Name="id_arma" Type="Int32" />
+    <Property Name="id_armadura" Type="Int32" />
+    <NavigationProperty Name="arma" Relationship="Self.fk_jugador_arma" FromRole="jugador" ToRole="arma" />
+    <NavigationProperty Name="armadura" Relationship="Self.fk_jugador_armadura" FromRole="jugador" ToRole="armadura" />
+    <NavigationProperty Name="personatge" Relationship="Self.fk_jugador_personatge" FromRole="jugador" ToRole="personatge" />
+    <NavigationProperty Name="usuari" Relationship="Self.fk_jugador_usuari" FromRole="jugador" ToRole="usuari" />
+  </EntityType>
+  <EntityType Name="monstre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vida" Type="Double" />
+    <Property Name="atac" Type="Double" />
+    <Property Name="atac_especial" Type="Double" />
+    <Property Name="defensa" Type="Double" />
+    <Property Name="defensa_especial" Type="Double" />
+  </EntityType>
+  <EntityType Name="personatge">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vida" Type="Double" />
+    <Property Name="atac" Type="Double" />
+    <Property Name="atac_especial" Type="Double" />
+    <Property Name="defensa" Type="Double" />
+    <Property Name="defensa_especial" Type="Double" />
+    <NavigationProperty Name="armas" Relationship="Self.fk_arma_personatge" FromRole="personatge" ToRole="arma" />
+    <NavigationProperty Name="armaduras" Relationship="Self.fk_armadura_personatge" FromRole="personatge" ToRole="armadura" />
+    <NavigationProperty Name="jugadors" Relationship="Self.fk_jugador_personatge" FromRole="personatge" ToRole="jugador" />
+  </EntityType>
+  <EntityType Name="usuari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contrasenya" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="jugadors" Relationship="Self.fk_jugador_usuari" FromRole="usuari" ToRole="jugador" />
+  </EntityType>
+  <Association Name="fk_arma_personatge">
+    <End Role="personatge" Type="Self.personatge" Multiplicity="1" />
+    <End Role="arma" Type="Self.arma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personatge">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="arma">
+        <PropertyRef Name="id_personatge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_arma">
+    <End Role="arma" Type="Self.arma" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="arma">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_arma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_armadura_personatge">
+    <End Role="personatge" Type="Self.personatge" Multiplicity="1" />
+    <End Role="armadura" Type="Self.armadura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personatge">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="armadura">
+        <PropertyRef Name="id_personatge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_armadura">
+    <End Role="armadura" Type="Self.armadura" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="armadura">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_armadura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_personatge">
+    <End Role="personatge" Type="Self.personatge" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="personatge">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_personatge" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_jugador_usuari">
+    <End Role="usuari" Type="Self.usuari" Multiplicity="0..1" />
+    <End Role="jugador" Type="Self.jugador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuari">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jugador">
+        <PropertyRef Name="id_usuari" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JocMPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="armas" EntityType="Self.arma" />
+    <EntitySet Name="armaduras" EntityType="Self.armadura" />
+    <EntitySet Name="jugadors" EntityType="Self.jugador" />
+    <EntitySet Name="monstres" EntityType="Self.monstre" />
+    <EntitySet Name="personatges" EntityType="Self.personatge" />
+    <EntitySet Name="usuaris" EntityType="Self.usuari" />
+    <AssociationSet Name="fk_arma_personatge" Association="Self.fk_arma_personatge">
+      <End Role="personatge" EntitySet="personatges" />
+      <End Role="arma" EntitySet="armas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_arma" Association="Self.fk_jugador_arma">
+      <End Role="arma" EntitySet="armas" />
+      <End Role="jugador" EntitySet="jugadors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_armadura_personatge" Association="Self.fk_armadura_personatge">
+      <End Role="personatge" EntitySet="personatges" />
+      <End Role="armadura" EntitySet="armaduras" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_armadura" Association="Self.fk_jugador_armadura">
+      <End Role="armadura" EntitySet="armaduras" />
+      <End Role="jugador" EntitySet="jugadors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_personatge" Association="Self.fk_jugador_personatge">
+      <End Role="personatge" EntitySet="personatges" />
+      <End Role="jugador" EntitySet="jugadors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_jugador_usuari" Association="Self.fk_jugador_usuari">
+      <End Role="usuari" EntitySet="usuaris" />
+      <End Role="jugador" EntitySet="jugadors" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
